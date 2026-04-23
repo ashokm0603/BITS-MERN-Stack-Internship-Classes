@@ -1,0 +1,35 @@
+lCSS: 
+------
+    ->CSS stands for cascading style sheet used to apply stylings , layouts, animations to the web page 
+    ->CSS are introduced in the year 1994 by the developer "hakon wium lie" 
+    ->the present version of CSS is CSS3 
+
+Methods to apply stylings to web page : 
+-----------------------------------------
+    1. Inline CSS/ inline Stylings 
+        ->applying styling by taking 'style attribute' in HTML Element 
+        ->this styling is applicable for only that Element 
+        ->for inline CSS not required CSS Selectors 
+        ->inline styling is more priority then Internal & External CSS 
+
+    2. Internal CSS/ Internal Stylings 
+        ->applying stylings by taking <style></style> tag in head part is called as a Internal CSS/ Internal Stylings 
+        ->to apply Internal CSS we need CSS Selectors 
+
+
+
+    3. External CSS/ External Stylings 
+        ->apply styling by taking new .css file and link to html file by using <link></link> tag 
+        ->to apply External CSS we need CSS Selectors 
+
+
+
+CSS Selectors : 
+----------------
+    ->CSS Selectors are used to target HTML Elements to apply stylings 
+    ->CSS Selectors are present only in Internal & External CSS
+    
+    Types of CSS Selectors: 
+    -----------------------
+
+
