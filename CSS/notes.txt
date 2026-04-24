@@ -31,5 +31,28 @@ CSS Selectors :
     
     Types of CSS Selectors: 
     -----------------------
+        2. Combinator Selectors : 
+            1. descendent Selector (space)
+            2. child Selector (>)
+            3. adjacent sibling Selector (+)
+            4. general sibling Selector (~)
+
+        3. pseudo class Selector 
+            i. Structural pseudo class Selectors 
+                1. :first-child 
+                2. :last-child 
+                3. :first-of-type 
+                4. :last-of-type 
+                5. :nth-child()
+
+
+
+            ii. Dynamic pseudo class Selectors
+                1. :active      ---|
+                2. :visited     ---| -> anchor tags
+                3. :focus            ->input tag 
+                4. :hover 
+
+
 
 

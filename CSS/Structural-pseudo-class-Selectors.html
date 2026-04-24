@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* li:first-child {
+            color: aliceblue;
+            background-color: maroon;
+        } */
+        button:first-of-type {
+            background-color: red;
+        }
+
+        /* li:last-child{
+            background-color: magenta;
+            text-align: center;
+        } */
+
+        button:last-of-type {
+            background-color: greenyellow;
+        }
+
+        /* li:nth-child(odd){
+            background-color: aqua;
+        }
+        li:nth-child(even){
+            background-color: blueviolet;
+        } */
+        li:nth-child(2),
+        li:nth-child(4),
+        li:nth-child(5) {
+            background-color: brown;
+            text-align: center;
+            width: 250px;
+            color: aliceblue;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: monospace;
+            text-decoration-line: underline;
+            text-decoration-style: dashed;
+            text-shadow: 5px 5px 5px aliceblue;
+            margin: 30px;
+            padding: 20px;
+            border-radius: 40px;
+            box-shadow: 5px 5px 5px black;
+            border-top: 5px solid red;
+            border-bottom: 5px solid blue;
+        }
+
+        a:visited {
+            color: aqua;
+        }
+
+        a:active {
+            color: magenta;
+            font-size: 25px;
+        }
+
+        input:focus {
+            background-color: burlywood;
+            color: brown;
+            font-style: italic;
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        div {
+            height: 150px;
+            width: 150px;
+            background-color: green;
+        }
+        div:hover{
+            background-color: red;
+        }
+
+        a:hover{
+            font-style: italic;
+            text-decoration: underline double 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div></div>
+
+    <input type="search" placeholder="search..." name="" id="">
+
+    <h4>
+        <a href="https://bitsvizag.com/contactus">Click here to open bits college</a>
+        <br><br>
+
+        <a href="https://bitsvizag.com/facilities/Knowledge-Resource-Center">Knowledge-Resource-Center</a>
+    </h4>
+    <ol>
+        <li>List -items</li>
+        <li>List -items</li>
+        <li>List -items</li>
+        <li>List -items</li>
+        <li>List -items</li>
+    </ol>
+
+    <div>
+        <span>span tag</span>
+        <button>button-1</button>
+        <button>button-2</button>
+        <button>button-3</button>
+        <button>button-4</button>
+        <button>button-5</button>
+        <button>button-6</button>
+
+        <button>button-7</button>
+    </div>
+</body>
+
+</html>
