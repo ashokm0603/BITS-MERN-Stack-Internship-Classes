@@ -56,3 +56,137 @@ CSS Selectors :
 
 
 
+
+        4. pseudo Element Selectors : 
+            1. ::after
+            2. ::before 
+            3. ::first-letter 
+            4. ::first-line 
+            5. ::maker
+            6. ::selection 
+            7. ::placeholder  
+
+
+        Attribute Selectors : 
+        ---------------------
+            ->Attribute Selectors are used to target HTML Element based on attributes 
+
+            Ex: <h1 algin="center" id="heading">  HELLO  </h1>
+                <h1  id="heading">  HELLO  </h1>
+
+                syntax:  selector[attributeName="value"]{
+                                                        .... styling.....
+                                                         }
+            
+            types: 
+                1. [attributeName="value"] 
+                2. [attributeName^="value"]
+                3. [attributeName$="value"]
+                4. [attributeName|="value"]
+                5. [attributeName*="value"] 
+                
+        
+
+Color Values: 
+--------------
+    1. color name 
+    2. rgb(red, green, blue) 
+    3. rgba(red, green, blue, alpha)
+    4. hsl(hue , saturation , lightness)
+    5. hsl(hue , saturation , lightness, alpha)
+    6. hexa code
+    7. transparent 
+    8. color() 
+ 
+
+
+Text Properties : 
+--------------------
+    ->text Properties are used to apply stylings for only 'text' 
+    Properties Like: 
+    ------------------
+        1. text-alignments 
+                    i. text-align :left , center , right , start , end, justify
+                    ii. word-spacing 
+                    iii. letter-spacing 
+                    iv. text-indent 
+                    v. line-height 
+
+        2. text decoration Properties 
+                i. text-decoration-line : none , underline , overline , line-through
+                ii. text-decoration-color
+                iii. text-decoration-style : solid , double , dotted , dashed , wavy 
+                iv .text-decoration-thickness
+                v. text-decoration  (short hand form) 
+
+        3. text transform Properties : 
+            i. text-transform : lowercase , uppercase , capitalized 
+        
+        4. text-overflow Properties: 
+            i. overflow        :visible , auto , hidden , scroll 
+            ii. overflow-x
+            iii. overflow-y       
+        
+        5. font Properties 
+            i. font-size 
+            ii. font-weight 
+            iii. font-style 
+            iv. font-family
+
+
+
+CSS Box Model: 
+----------------
+    1. padding
+        ->The space between content and border
+        padding Properties: 
+        -------------------
+            1. padding-top 
+            2. padding-bottom 
+            3. padding-left 
+            4. padding-right 
+            5. padding (short hand form)
+
+
+    2. border 
+        ->The space between padding and margin
+        border Properties: 
+        -----------------
+            1. border-style :none , solid , double, dotted , dashed
+            2. border-width 
+            3. border-color 
+            4. border( short hand form )
+
+            5. border-top 
+            6. border-left 
+            7. border-right 
+            8. border-bottom
+
+        border radius Properties:
+        -------------------------
+                1.border-top-left-radius 
+                2.border-top-right-radius
+                3.border-bottom-left-radius 
+                4.border-bottom-right-radius
+                5.border-radius(short hand form)
+               
+
+
+    3. margin 
+            1. margin-top 
+            2. margin-bottom 
+            3. margin-left 
+            4. margin-right 
+            5. margin (short hand form)
+
+
+Flex Properties : 
+grid Properties : 
+position Properties 
+animations 
+media queries  
+
+
+
+
+
