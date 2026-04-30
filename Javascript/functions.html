@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let userDetails = function (userName, password) {
+            console.log("This is functional Expression");
+            return userName + " " + password
+            return "HELLO"
+
+        }
+
+        let result = userDetails('ravi@123', "admin@123");
+        console.log(userDetails("ramu", "ramu@123"));
+        console.log(result);
+
+
+
+
+        //normal function 
+        function employeeDetails(name, role, salary, address) {
+            // console.log("This is Normal Function..");
+            // console.log("Name: ", name);
+            // console.log("Role: ", role);
+            // console.log("Salary: ", salary);
+            // console.log("Address: ", address);
+            return [name, role, salary, address]
+        }
+
+
+        console.log(employeeDetails("Teja", "developer", 90000, "kochi"));
+        console.log(employeeDetails("Teja", "developer", 90000, "kochi"));
+        console.log(employeeDetails("Teja", "developer", 90000, "kochi"));
+        console.log(employeeDetails("Teja", "developer", 90000, "kochi"));
+        console.log(employeeDetails("Teja", "developer", 90000, "kochi"));
+
+
+
+        //    immediate invoking function/self calling function 
+
+        (function () {
+            let apiKey = "AIzaSyA3FkWSWXPzN77FnSaHsxPm568_t222n9g"
+            console.log("This is immediate invoking function");
+            return apiKey;
+        })
+            ()
+        let a = 10;
+
+        //arrow function
+
+        let arrowFun = () => console.log("Arrow function");
+        arrowFun()
+        arrowFun()
+        arrowFun();
+
+        let test = (skills, name) => {
+            let a = 10
+            let b = 20
+            console.log(a, b);
+            console.log("Name :", name, "Skills: ", skills);
+        }
+
+        test(["node js", "express js", "mongoDb", "react Js"], "Vivek Ayan")
+
+        //nested functions 
+
+        // function outerFun() {
+        //     function innerFun() {
+        //         console.log("Inner Function");
+        //     }
+        //     console.log("Outer Function");
+        //     innerFun()
+        // }
+        // outerFun()
+
+        //     function outerFun(a,b) {
+        //         console.log("Outer Function");
+        //         return function innerFun() {
+        //             console.log(a,b);
+        //             console.log("Inner Function");
+        //         }
+
+        //     }
+        //    let result1=outerFun(10,20)
+        //    result1()
+
+
+
+        function outerFun(count) {
+            console.log("Outer Function");
+            return function innerFun() {
+                return count++;
+            }
+        }
+        let result1 = outerFun(1)
+        console.log(result1());
+        console.log(result1());
+        console.log(result1());
+        console.log(result1());
+
+
+
+        function homePage() {
+            console.log("Home page ");
+        }
+        function loginPage() {
+            console.log("login page logic");
+        }
+        function registerPage() {
+            console.log("Register page logic");
+
+        }
+        homePage(registerPage(), loginPage())
+
+
+        function display(fun1, fun2) {
+            fun1();
+            fun2();
+        }
+
+        display(() => {
+            console.log("first callback function");
+        }, () => {
+            console.log("Second callback function");
+        })
+
+        //generator function
+        function* generator() {
+            yield 10;
+            yield 50;
+            yield 60;
+            console.log("This is generator function");
+        }
+
+        let nextGen=generator();
+
+        
+        console.log(nextGen.next());
+        console.log(nextGen.next());
+        console.log(nextGen.next());
+        console.log(nextGen.next());
+        
+      
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

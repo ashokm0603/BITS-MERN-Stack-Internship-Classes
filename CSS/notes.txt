@@ -181,10 +181,61 @@ CSS Box Model:
 
 
 Flex Properties : 
+        1. display :flex; 
+        2. flex-direction 
+        3. flex-wrap 
+        4. justify-content 
+        5. align-items 
+
+        6. flex-grow 
+        7. flex-shrink 
+        8. flex 
+
 grid Properties : 
-position Properties 
+
+        1. display :grid 
+        2. grid-template-columns
+        3. grid-template-rows 
+        4. row-gap 
+        5. column-gap 
+
+
+        6. grid-row-start 
+        7. grid-row-end 
+        8. grid-column-start 
+        9. grid-column-end 
+
+
+
+position Properties : 
+        position : static,relative , absolute , fixed , sticky 
+        left 
+        right 
+        top 
+        bottom
+
+
 animations 
-media queries  
+        1. define animation using @keyframes 
+        2. link that animation to html Element
+
+
+
+
+
+
+media queries : 
+    ->media queries  are used to build responsive web pages based on device width (device view port)
+    ->break points 
+        1. smaller devices (mobiles with brands)   0px - 450px
+        2. medium devices (tablets / iPad)  450px- 850px
+        4. large device(laptops)      850px - 1200px
+        6. x-large device(digital screen)   >1200px 
+
+    ->@media screen  min-width & max-width 
+
+    
+
 
 
 
