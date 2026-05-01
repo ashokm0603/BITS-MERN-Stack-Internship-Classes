@@ -210,4 +210,57 @@ DOM (Document object model):
     ->To build Dynamic web pages 
 
 
+
+
+Loops : 
+-------
+    1. for loop 
+        Syntax:
+                for(initialization; condition ;increment/ decrement){
+
+                } 
+
+
+    2. while loop 
+        Syntax : 
+            while(condition){
+
+                increment/decrement;
+            }
+
+
+    3. do while loop 
+
+        Syntax : 
+
+        do{
+            increment/decrement;
+        }while(condition);
+
+    4. for-in loop 
+            ->for-in loop is used to iterate strings, arrays 
+            ->for-in loop is used to fetch only index's 
+
+            Syntax : 
+             for(variable in string/arrays){
+            
+            }
+
+    5. for-of loop 
+            ->for-of loop is used to iterate strings, arrays 
+            ->for-of loop is used to fetch only values 
+
+            Syntax : 
+             for(variable of string/arrays){
+            
+            }
+
+
+    6. forEach loop 
+        ->forEach() is Higher order function used to iterate arrays 
+        Syntax : 
+            Array.forEach((value,index,array)=>{
+            
+            })
+
     

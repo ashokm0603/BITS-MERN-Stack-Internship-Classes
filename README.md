@@ -1,4 +1,8 @@
-<h1 algin="center">BITS MERN Stack Internship Classes </h1>
+<h1 align="center">BITS MERN Stack Internship Classes</h1>
+
+<p align="right">
+  <img src="https://img.shields.io/badge/Updates-Daily-brightgreen" />
+</p>
 
 This repository contains **daily class code**, **practice examples**, and **running notes** from the MERN Stack internship sessions.  
 It is designed to help students revise concepts, practice coding, and build strong fundamentals in full-stack development.
