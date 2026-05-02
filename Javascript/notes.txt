@@ -263,4 +263,15 @@ Loops :
             
             })
 
+
+Array inbuilt Methods : 
+------------------------
+
+    1. map() 
+    2. filter() 
+    3. reduce()     
+
+spread operators :Es 6  
+------------------------
+    ->  ... 
     
