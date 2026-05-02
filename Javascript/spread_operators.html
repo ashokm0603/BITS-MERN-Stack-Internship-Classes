@@ -22,34 +22,52 @@
         //spread operators in array
         let arr3 = [...arr1, ...arr2, "html", "css", true];
         console.log(arr3);
-        
+
         //array de-structuring
         let [a, b, c, d] = arr1;
         console.log(a);
         console.log(b);
         console.log(c);
-        
+
         let [e, f, g, h] = arr2
         h()
-        
-        
+
+
         //spread operators in Objects 
 
-        let orderDetails={
-            productName:"mobile",
-            price:50000,
-            status:"Done"
+        let orderDetails = {
+            productName: "mobile",
+            price: 50000,
+            status: "Done"
         }
 
-        let user={
-            name:"ravi",
-            phone:98745612
+        let user = {
+            name: "ravi",
+            phone: 98745612
         }
 
-        let orderHistory ={...user,["name"]:"hello"};
+        let orderHistory = { ...user, ["name"]: "hello" };
         console.log(orderHistory);
 
-  
+
+        //object de-structuring 
+
+        let courseDetails={
+            name:'MERN',
+            duration:"30days",
+            totalHrs:"180hs"
+        }
+
+        let {name, duration, totalHrs}=courseDetails;
+      
+        console.log(name);
+        console.log(duration);
+        
+        
+
+
+
+
 
 
 
