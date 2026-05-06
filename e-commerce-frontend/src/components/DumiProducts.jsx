@@ -4,32 +4,6 @@ import Row from "react-bootstrap/Row";
 
 function DumiProducts() {
   let products = [
-    {
-      imageSrc:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzEHRe6qwUg__61qgldYKbyvMS6yhDdyTHLQ&s",
-      title: "Cloths",
-    },
-     {
-      imageSrc:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzEHRe6qwUg__61qgldYKbyvMS6yhDdyTHLQ&s",
-      title: "Cloths",
-    },
-    
-     {
-      imageSrc:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzEHRe6qwUg__61qgldYKbyvMS6yhDdyTHLQ&s",
-      title: "Cloths",
-    },
-     {
-      imageSrc:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzEHRe6qwUg__61qgldYKbyvMS6yhDdyTHLQ&s",
-      title: "Cloths",
-    },
-     {
-      imageSrc:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzEHRe6qwUg__61qgldYKbyvMS6yhDdyTHLQ&s",
-      title: "Cloths",
-    },
      {
       imageSrc:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzEHRe6qwUg__61qgldYKbyvMS6yhDdyTHLQ&s",
