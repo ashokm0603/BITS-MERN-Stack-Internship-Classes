@@ -13,6 +13,7 @@ function Register() {
     password: "",
     address: "",
     city: "",
+    userType: "user",
     state: "",
     zipCode: "",
   });
@@ -25,7 +26,6 @@ function Register() {
     e.preventDefault();
     console.log(details);
     toast.success("register successfully 😊");
-    
   };
 
   return (
@@ -66,6 +66,15 @@ function Register() {
               required
               placeholder="Enter email"
             />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridUserType">
+            <Form.Label>User Type</Form.Label>
+            <Form.Select name="userType" onChange={handleChange}>
+              <option>Choose User Type</option>
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </Form.Select>
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPassword">
