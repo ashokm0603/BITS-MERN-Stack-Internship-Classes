@@ -19,6 +19,7 @@ function NavBar() {
                 View Products
               </NavDropdown.Item>
               <NavDropdown.Item href="">Edit Products</NavDropdown.Item>
+              <NavDropdown.Item href="/cart">Cart Products</NavDropdown.Item>
               <NavDropdown.Item href="">Delete Product</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="">View Users</NavDropdown.Item>

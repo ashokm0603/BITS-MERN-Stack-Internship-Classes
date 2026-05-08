@@ -50,3 +50,16 @@
     font-weight: bold;
 }
 
+#cart-btn{
+    position: fixed;
+  z-index: 2;
+  border-radius: 10px;
+  padding: 8px;
+  border: none;
+  top: 300px;
+  background-color: green;
+  font-style: italic;
+  color: aliceblue;
+  font-weight: bold;
+}
+
