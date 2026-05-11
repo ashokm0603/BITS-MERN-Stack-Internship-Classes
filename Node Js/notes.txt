@@ -1,0 +1,29 @@
+Node JS: 
+-------
+    ->node js is the run time server side javascript runTime Environment 
+    ->Using Node Js we can Build Server (http core model) 
+    
+run Js File : 
+  Command -> node fileName 
+
+
+user Define Modules : 
+----------------------
+    ->any functions defined by user 
+
+    ->export Modules from one file to anther file 
+            syntax  : module.export = moduleName 
+                      module.exports={moduleName1 , moduleName2...}
+
+    ->import exported module 
+                syntax :   const   {moduleName1, moduleName2}=require("fileName")
+
+
+
+
+node core inbuilt modules(core modules) : 
+-------------------------------------------
+    ->core modules is the inbuilt modules no need to required install externally 
+    
+
+
