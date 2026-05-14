@@ -1,0 +1,69 @@
+
+let studentDetails = [];
+let collegeDetails = [];
+
+app.use(express.json()); //here middleware  used to send data in json format
+
+app.post("/add-college", (req, res) => {
+  const { name, code, departments, address } = req.body;
+  collegeDetails.push({
+    colName: name,
+    colCode: code,
+    colDepartments: departments,
+    colAddress: address,
+  });
+  res.status(200).json({ message: "college added successfully" });
+});
+
+app.get("/get-colleges", (req, res) => {
+  res.status(200).json({ collegeDetails });
+});
+
+app.delete("/delete-student/:id", (req, res) => {
+  const paramsRollNumber = req.params.id;
+  const afterDelete=studentDetails.filter((student)=>student.stdRollNo!=paramsRollNumber)
+  studentDetails=afterDelete;
+
+  res.status(200).json({message:"student record delete successfully"})
+});
+
+
+
+
+//this post used to add one student  details
+app.post("/add-student", (req, res) => {
+  const newStudent = {
+    stdName: req.body.name,
+    stdRollNo: req.body.rollNo,
+    stdBranch: req.body.branch,
+    stdSkills: req.body.skills,
+  };
+  studentDetails.push(newStudent);
+  res.status(200).json({ message: "student added successfully", newStudent });
+});
+
+// add multiple students at a time
+app.post("/add-multiplestudents", (req, res) => {
+  const allNewStudents = req.body.allStudents;
+  studentDetails.push(allNewStudents);
+  res.status(200).json({ message: "all students added successfully" });
+});
+
+//this get used to get all students
+app.get("/get-students", (req, res) => {
+  res.status(200).json({ students: studentDetails });
+});
+
+
+
+const express = require("express");
+const app = express();
+const PORT = 4000;
+const connection=require("./config/db")
+
+connection()
+
+//when server starts  listen function executes first and starts in server port
+app.listen(PORT, () => {
+  console.log("Server running on port", PORT);
+});
