@@ -1,6 +1,4 @@
-/* eslint-disable react-hooks/set-state-in-effect */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react-hooks/set-state-in-render */
+
 import { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -54,7 +52,7 @@ function NavBar() {
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item>
-                  <Link to="">View Users</Link>
+                  <Link to="/view-users">View Users</Link>
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>

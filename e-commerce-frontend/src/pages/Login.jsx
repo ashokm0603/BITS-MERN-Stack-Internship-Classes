@@ -3,7 +3,7 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-
+import axios from "axios";
 const Login = () => {
   const [loginDetails, setLoginDetails] = React.useState({
     username: "",
@@ -53,27 +53,29 @@ const Login = () => {
   };
 
   //function to handle form submit
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     try {
       e.preventDefault();
-      if (
-        mailOtp != "" &&
-        mailOtp == loginDetails.otp &&
-        loginDetails.password != ""
-      ) {
-        toast.success("login successful");
-        localStorage.setItem("token", "241sadgghs3546adDh");
-        setTimeout(() => {
-          navigate("/home");
-        }, 3000);
-      } else if (mailOtp != loginDetails.otp) {
-        toast.warn("invalid otp");
-      } else {
-        toast.error("failed to login");
-      }
+      // if (
+      //   mailOtp != "" &&
+      //   mailOtp == loginDetails.otp &&
+      //   loginDetails.password != ""
+      // ) {
+      const response = await axios.post("http://localhost:5000/user/login", {
+        username: loginDetails.username,
+        password: loginDetails.password,
+      });
+      toast.success("login successful");
 
-      console.log(loginDetails);
-      console.log(mailOtp);
+      localStorage.setItem("token", response.data.token);
+      setTimeout(() => {
+        navigate("/home");
+      }, 3000);
+      // } else if (mailOtp != loginDetails.otp) {
+      // toast.warn("invalid otp");
+      // } else {
+      // toast.error("failed to login");
+      // }
     } catch (err) {
       console.log(err);
     }

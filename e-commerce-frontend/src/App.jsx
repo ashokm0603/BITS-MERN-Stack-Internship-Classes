@@ -10,14 +10,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/style.css";
 import LandingPage from "./pages/LandingPage";
 import CartPage from "./pages/CartPage";
-import CartProvider, { CartContext } from "./service/CartProvider";
+import CartProvider from "./service/CartProvider";
 import ErrorPage from "./pages/ErrorPage";
 import ProtectedRoute from "./components/ProtectedRoute";
-import { useContext } from "react";
+import ViewUsers from "./pages/ViewUsers";
 
 const App = () => {
 
-const {isLogin}=useContext(CartContext)
+
   return (
     <BrowserRouter>
       <CartProvider>
@@ -27,7 +27,7 @@ const {isLogin}=useContext(CartContext)
           <Route
             path="cart"
             element={
-              <ProtectedRoute authenticated={isLogin}>
+              <ProtectedRoute authenticated={true}>
                 <CartPage />
               </ProtectedRoute>
             }
@@ -40,7 +40,7 @@ const {isLogin}=useContext(CartContext)
         <Route
           path="/home"
           element={
-            <ProtectedRoute authenticated={isLogin}>
+            <ProtectedRoute authenticated={true}>
               <Home />
             </ProtectedRoute>
           }
@@ -48,7 +48,7 @@ const {isLogin}=useContext(CartContext)
         <Route
           path="products"
           element={
-            <ProtectedRoute authenticated={isLogin}>
+            <ProtectedRoute authenticated={true}>
               <Products />
             </ProtectedRoute>
           }
@@ -56,12 +56,14 @@ const {isLogin}=useContext(CartContext)
         <Route
           path="dashboard"
           element={
-            <ProtectedRoute authenticated={isLogin}>
+            <ProtectedRoute authenticated={true}>
               <Dashboard />
             </ProtectedRoute>
           }
         />
         <Route path="*" element={<ErrorPage />} />
+
+        <Route path="view-users" element={<ViewUsers/>}/>
       </Routes>
     </BrowserRouter>
   );

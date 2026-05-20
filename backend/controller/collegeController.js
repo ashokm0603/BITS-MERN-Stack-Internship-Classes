@@ -38,16 +38,63 @@ const getAllColleges = async (req, res) => {
 const deleteCollege = async (req, res) => {
   try {
     const deleteDocument = await Colleges.findByIdAndDelete(req.params.id);
-console.log(deleteDocument);
+    console.log(deleteDocument); //to check stored values in variable
 
-    res.status(200).json({message:"record deleted successfully"})
+    res.status(200).json({ message: "record deleted successfully" });
   } catch (error) {
     res.status(500).json({ message: "failed to college details" });
   }
 };
 
 //get college  based  on ID
-//update college details
-//update college mail
+const getCollegeBasedOnId = async (req, res) => {
+  try {
+    const foundCollege = await Colleges.findById(req.params.id);
+    res.status(200).json({ foundCollege });
+  } catch (error) {
+    res.status(500).json({ message: "failed to get college details" });
+  }
+};
 
-module.exports = { addCollege, getAllColleges };
+//update college details
+
+const updateCollegeDetails = async (req, res) => {
+  try {
+    const updateCollegeDetails = req.body;
+    const updatedCollege = await Colleges.findByIdAndUpdate(
+      req.params.id,
+      updateCollegeDetails,
+      { new: true },
+    );
+
+    res.status(200).json({ message: "updated college details successfully" });
+  } catch (error) {
+    res.status(500).json({ message: "failed to update college details" });
+  }
+};
+
+//update college mail
+const updateEmail = async (req, res) => {
+  try {
+    const UpdatedEmail = await Colleges.findOneAndUpdate(
+      {
+        email: req.params.email,
+      },
+      { email: req.body.email },
+      { new: true },
+    );
+
+    res.status(200).json({ message: "email updated successfully" });
+  } catch (error) {
+    res.status(500).json({ message: "failed to update email.." });
+  }
+};
+
+module.exports = {
+  addCollege,
+  getAllColleges,
+  deleteCollege,
+  getCollegeBasedOnId,
+  updateCollegeDetails,
+  updateEmail
+};
