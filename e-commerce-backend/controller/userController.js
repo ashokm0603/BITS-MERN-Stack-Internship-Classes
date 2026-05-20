@@ -43,7 +43,7 @@ const login = async (req, res) => {
     const foundUser = await Users.findOne({ email: username });
     //generate JWT new token
     const token = await jwt.sign(
-      { id: foundUser._id, email: username, password: password },
+      {id:foundUser._id, role: foundUser.userType, email: username },
       process.env.SECRETE_KEY,
       { notBefore: "10M", expiresIn: "20M" },
     );
@@ -84,12 +84,6 @@ const updateProfile = async (req, res) => {
 // get Users
 const getAllUsers = async (req, res) => {
   // try {
-  const authorization = req.headers["authorization"];
-  const token = authorization.split(" ")[1];
-
-  const verifiedToken = await jwt.verify(token, process.env.SECRETE_KEY);
-  console.log(verifiedToken);
-
   const allUsers = await Users.find();
   res.status(200).json({ allUsers });
   // } catch (error) {
