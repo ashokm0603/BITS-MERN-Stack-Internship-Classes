@@ -1,11 +1,14 @@
 const isAdmin = (req, res, next) => {
   try {
-    if (req.body.role != "admin") {
-      res.status(403).json({ message: "Access Denied , Admin only" });
+    if (req.body.user.role != "admin") {
+      return res.status(403).json({ message: "Access Denied , Admin only" });
     }
-    next();
+
+    console.log("Is Admin");
+
+    return next();
   } catch (error) {
-    res.status(500).json({message:"Internal Server Error"})
+    return res.status(500).json({ message: "Internal Server Error" });
   }
 };
 

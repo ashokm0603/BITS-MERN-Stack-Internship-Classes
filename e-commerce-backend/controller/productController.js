@@ -3,6 +3,10 @@ const Products = require("../model/ProductModel");
 // add product
 const addProducts = async (req, res) => {
   try {
+
+
+    console.log(req.body);
+    
     const newProduct = {
       name: req.body.name,
       price: req.body.price,
@@ -13,9 +17,12 @@ const addProducts = async (req, res) => {
       reviews: req.body.reviews,
     };
     await Products.insertOne(newProduct);
+
+    console.log("add product handler");
+    
     res.status(201).json({ message: "Product Added" });
   } catch (err) {
-    res.status(500).json({ message: "Failed add Product" });
+    res.status(500).json({ message: "Failed add Product" , error:err});
   }
 };
 
@@ -26,4 +33,4 @@ const addProducts = async (req, res) => {
 
 //filter products based on price
 //sort products based on price
-module.exports=addProducts;
+module.exports = addProducts;

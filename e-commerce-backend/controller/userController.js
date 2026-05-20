@@ -45,7 +45,7 @@ const login = async (req, res) => {
     const token = await jwt.sign(
       {id:foundUser._id, role: foundUser.userType, email: username },
       process.env.SECRETE_KEY,
-      { notBefore: "10M", expiresIn: "20M" },
+      { notBefore: "10s", expiresIn: "20M" },
     );
 
     // console.log("generated Token:", token);
@@ -53,6 +53,7 @@ const login = async (req, res) => {
     if (!hashedPassword) {
       res.status(401).json({ message: "invalid password" });
     }
+  
     res.status(202).json({ message: "login successful", token });
   } catch (error) {
     res.status(500).json({ message: "username not found" });
