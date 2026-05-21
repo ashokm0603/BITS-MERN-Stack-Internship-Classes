@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 //add user
 const register = async (req, res) => {
-  try {
+  // try {
     const {
       name,
       email,
@@ -29,12 +29,12 @@ const register = async (req, res) => {
       state: state,
       zipCode: zipCode,
     };
-    await Users.insertOne(newUser);
+    await Users.create(newUser);
     res.status(200).json({ message: "Register Successfully" });
-  } catch (error) {
+  // } catch (error) {
     res.status(500).json({ message: "failed to register", err: error });
   }
-};
+// };
 
 //login handler
 const login = async (req, res) => {

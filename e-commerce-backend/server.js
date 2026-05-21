@@ -15,6 +15,9 @@ app.use("/ai",prompt)
 const ProductRouter=require("./routes/productRouter")
 app.use("/products",ProductRouter)
 
+const cartRouter=require("./routes/cartRouter");
+app.use("/cart",cartRouter);
+
 
 const PORT=process.env.PORT
 connection()
