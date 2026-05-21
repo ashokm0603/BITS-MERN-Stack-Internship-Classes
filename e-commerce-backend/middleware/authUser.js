@@ -13,13 +13,13 @@ const isUser = async (req, res, next) => {
 
     return next();
   } catch (error) {
-    if (err instanceof jwt.NotBeforeError) {
+    if (error instanceof jwt.NotBeforeError) {
       return res.status(401).json({ message: "Token still not active" });
     }
-    if (err instanceof jwt.TokenExpiredError) {
+    if (error instanceof jwt.TokenExpiredError) {
       return res.status(401).json({ message: "Token Expired" });
     }
-    if (err instanceof jwt.JsonWebTokenError) {
+    if (error instanceof jwt.JsonWebTokenError) {
       return res.status(401).json({ message: "invalid token" });
     }
 
