@@ -37,10 +37,10 @@ const editProducts = async (req, res) => {
 //delete products
 const deleteProduct = async (req, res) => {
   try {
-    const deletedProduct = Products.findByIdAndDelete(req.params.id);
-    res.status(200).json({ message: "Product Deleted", deleteProduct });
+    const deletedProduct =await Products.findByIdAndDelete(req.params.id);
+    res.status(200).json({ message: "Product Deleted", deletedProduct });
   } catch (error) {
-    res.status(500).json({ message: "failed to Delete", deleteProduct });
+    res.status(500).json({ message: "failed to Delete", error });
   }
 };
 
@@ -50,17 +50,17 @@ const getProductBasedOnId = async (req, res) => {
     const foundProduct = await Products.findById(req.params.id);
     res.status(200).json({ foundProduct });
   } catch (error) {
-    res.status(500).json({ message: "failed get Product" });
+    res.status(500).json({ message: "failed get Product", error });
   }
 };
 
 //get all products
 const getAllProducts = async (req, res) => {
   try {
-    const allProducts = Products.find();
+    const allProducts =await Products.find();
     res.status(200).json({ allProducts });
   } catch (error) {
-    res.status(500).json({ message: "failed get all Product" });
+    res.status(500).json({ message: "failed get all Product", error });
   }
 };
 
